@@ -1,3 +1,4 @@
 .vercel
+# Ignore local environment variables
 .env.local
 .env.development.local
