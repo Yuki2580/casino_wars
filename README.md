@@ -11,6 +11,7 @@ This project consists of several applications below
 3. City NFT mint frame
 4. Casino Wars main game frame
 5. Leaderboard frame
+6. PostgreSQL
 
 
 Technlogies to develop
@@ -28,5 +29,11 @@ If you want to run our frame, enroll and create accounts of neynar api, alchemy 
 - https://neynar.com/
 - https://www.alchemy.com/
 - https://vercel.com/
+
+We created a "user_data" table in PostgresSQL below
+| id | fid | wallet_address | point | game1_tried_at | game2_tried_at | game2_tried_at | game3_tried_at |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| 1 | TD | TD | TD | TD | TD | TD | TD |
+| 2 | TD | TD | TD | TD | TD | TD | TD |
 
 Navigate to each directory and follow the instructions provided in each README file to run the code.
