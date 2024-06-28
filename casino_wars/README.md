@@ -7,10 +7,10 @@ In two of these games, you have a 50% chance of winning and can challenge the ga
 In RPS, you have a one-third chance of winning, but the points you earn are higher. Accumulate points and compete with other users and cities for the top scores!
 
 Good luck!
---------------------------------------------------------------------------
+
+
 
 This frame is deployed to https://casino-wars.vercel.app/
---------------------------------------------------------------------------
 
 Please follow the steps below to start the application.
 

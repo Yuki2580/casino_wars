@@ -1,10 +1,11 @@
 # Leaderboard Frame
 
 This is the leaderboard framework where you can check the personal points you have earned so far and see the city rankings among the three cities: Las Vegas, Macau, and Monte Carlo.
---------------------------------------------------------------------------
+
+
 
 This frame is deployed to https://city-leaderboard.vercel.app/
---------------------------------------------------------------------------
+
 
 Used Technlogies
 

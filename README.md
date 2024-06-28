@@ -1,7 +1,8 @@
 # Casino Wars Project
 
 Our project is a city-based and personal-based leaderboard point earning SocialFi game framework. To play these games, you must own a city NFT, which can be minted through the city NFT frame. Once you have a city NFT, you are eligible to play three games: Roulette, Rock Paper Scissors (RPS), and Coin Flip, each once per day.
---------------------------------------------------------------------------
+
+
 
 This project consists of several applications below
 

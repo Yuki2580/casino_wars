@@ -1,7 +1,9 @@
 # City NFT mint frame.
 
 You can mint one of the NFTs: Las Vegas, Macau, or Monte Carlo. Each user can hold only one NFT and cannot mint two or three NFTs. This NFT can be used to enter our main Casino Wars framework.
---------------------------------------------------------------------------
+
+
+
 
 This frame is deployed to https://casino-wars-nft-frame.vercel.app
 
