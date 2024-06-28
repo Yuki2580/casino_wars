@@ -31,7 +31,7 @@ If you want to run our frame, enroll and create accounts of neynar api, alchemy 
 - https://vercel.com/
 
 We created a "user_data" table in PostgresSQL below:
-| id | fid | wallet_address | point | city | game1_tried_at | game2_tried_at | game2_tried_at | game3_tried_at |
+| id | fid | wallet_address | point | city | game1_tried_at | game2_tried_at | game3_tried_at |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | 1 | 1389 | 0xb***** | 100 | 0 | TIMESTAMP | TIMESTAMP | TIMESTAMP |
 | 2 | 2398 | 0xa***** | 1200 | 1 | TIMESTAMP | TIMESTAMP | TIMESTAMP |
