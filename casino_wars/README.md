@@ -1,4 +1,4 @@
-Welcome to the Casino Wars main game frame!
+# Casino Wars Game Frame
 
 To play these games, you must own a city NFT, which can be minted through the city NFT frame. Once you have a city NFT, you are eligible to play three games: Roulette, Rock Paper Scissors (RPS), and Coin Flip, each once per day.
 
@@ -8,6 +8,9 @@ In RPS, you have a one-third chance of winning, but the points you earn are high
 
 Good luck!
 --------------------------------------------------------------------------
+
+This frame is deployed to https://casino-wars.vercel.app/
+
 
 Please follow the steps below to start the application.
 
