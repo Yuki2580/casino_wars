@@ -7,6 +7,7 @@ In this project, we do not deploy NFT contracts on the mainnet; instead, we depl
 In the ".env" file, you need to set the ALCHEMY_API_KEY, which can be obtained from the Alchemy website, and the PRIVATE_KEY, which can be retrieved from your wallet. In this implementation, we used the MetaMask private key.
 
 Before compiling the Solidity files, please set the "virtual" keyword in the safeTransferFrom function on line 152 in the file located at node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol.
+--------------------------------------------------------------------------
 
 Alchemy Website
 - https://www.alchemy.com/

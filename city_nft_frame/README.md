@@ -1,8 +1,7 @@
 # City NFT mint frame.
 
-You can mint one of the NFT among Las Vegas, Macau, Monte Carlo.
-You can hold only one NFT and cannot mint 2 or 3 NFT.
-This NFT can be used to enter our main Casino Wars frame.
+You can mint one of the NFTs: Las Vegas, Macau, or Monte Carlo. Each user can hold only one NFT and cannot mint two or three NFTs. This NFT can be used to enter our main Casino Wars framework.
+--------------------------------------------------------------------------
 
 This frame is deployed to https://casino-wars-nft-frame.vercel.app
 
@@ -23,6 +22,7 @@ Please follow the steps below to start the application.
 
 1. change BASE_URL in config.ts
 2. create files, ".env.local" and ".env.development.local"
+
 In ".env.development.local", set
 ```
 POSTGRES_URL
