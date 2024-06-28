@@ -123,10 +123,17 @@ app.frame('/firstValidate/:game', neynarMiddleware, async (c) => {
   const { buttonValue } = c;
   const date = new Date(Date.now());
   var image_url = '';
+  var random = false;
 
   updateGameTriedAt(game, date, fid ?? -1);
 
-  const random = Math.random() <= 1 / 2;
+  if (game == "1" || game == "3") {
+    random = Math.random() <= 1 / 2;
+   }
+   else if (game == "2") {
+    random = Math.random() <= 1 / 3;
+   }
+
   let button_value;
   switch (game) {
     case '1':
@@ -226,10 +233,18 @@ app.frame('/secondValidate/:game', neynarMiddleware, async (c) => {
   const { buttonValue } = c;
   const date = new Date(Date.now());
   var image_url = '';
+  var random = false;
 
   updateGameTriedAt(game, date, fid ?? -1);
 
-  const random = Math.random() <= 1 / 2;
+  if (game == "1" || game == "3") {
+    random = Math.random() <= 1 / 2;
+   }
+   else if (game == "2") {
+    random = Math.random() <= 1 / 3;
+   }
+
+   
   let button_value = '';
   switch (game) {
     case '1':
@@ -336,10 +351,16 @@ app.frame('/thirdValidate/:game', neynarMiddleware, async (c) => {
   const date = new Date(Date.now());
   var image_url = '';
   var button_value = '';
+  var random = false;
 
   updateGameTriedAt(game, date, fid ?? -1);
 
-  const random = Math.random() <= 1 / 2;
+  if (game == "1" || game == "3") {
+   random = Math.random() <= 1 / 2;
+  }
+  else if (game == "2") {
+   random = Math.random() <= 1 / 3;
+  }
 
   switch (game) {
     case '1':

@@ -2,10 +2,7 @@
 
 This is the leaderboard framework where you can check the personal points you have earned so far and see the city rankings among the three cities: Las Vegas, Macau, and Monte Carlo.
 
-
-
 This frame is deployed to https://city-leaderboard.vercel.app/
-
 
 Used Technlogies
 
@@ -27,6 +24,7 @@ Please follow the steps below to start the application.
 2. create files, ".env.local" and ".env.development.local"
 
 In ".env.development.local", set
+
 ```
 POSTGRES_URL
 POSTGRES_PRISMA_URL
@@ -38,12 +36,14 @@ POSTGRES_DATABASE
 ```
 
 In ".env.local", set
+
 ```
 NEYNAR_API_KEY
 ALCHEMY_API_KEY
 ```
 
 3. run the command
+
 ```
 npm install
 npm run dev

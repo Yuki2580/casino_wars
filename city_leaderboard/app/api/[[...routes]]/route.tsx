@@ -103,14 +103,28 @@ app.frame('/', neynarMiddleware, async (c) => {
 // if the user click 'City' button, display the city point ranking
 app.frame('/board', neynarMiddleware, async (c) => {
   const { buttonValue } = c;
+  console.log(buttonValue);
   const fid = c['var']['interactor']?.fid;
 
+  console.log(buttonValue);
   if (buttonValue == 'personal') {
     const { rows: user_data } =
       await sql`SELECT * FROM public."user_data" WHERE fid = ${fid};`;
     const { rows: top3_data } =
       await sql`SELECT * FROM public."user_data" ORDER BY point DESC LIMIT 3;`;
-    var user = await getUserInfo(fid);
+
+    if (user_data.length === 0) {
+      var name = '';
+      var point = '0';
+      var pfp_image = 'https://i.imgur.com/1zj6Z9I.png';
+    } else {
+      var user = await getUserInfo(fid);
+
+      var name = `@${user[0]['display_name']}`;
+      var point: string = user_data[0].point;
+      var pfp_image =
+        c['var']['interactor']?.pfpUrl || 'https://i.imgur.com/1zj6Z9I.png';
+    }
 
     const fids = top3_data.map((user) => user.fid);
     const top3_users_data = getTop3Users(fids);
@@ -124,11 +138,6 @@ app.frame('/board', neynarMiddleware, async (c) => {
         point: top3_points[index],
       })),
     );
-
-    const name = `@${user[0]['display_name']}`;
-    const point = user_data[0].point;
-    const pfp_image =
-      c['var']['interactor']?.pfpUrl || 'https://i.imgur.com/1zj6Z9I.png';
 
     return c.res({
       action: '/',
@@ -179,18 +188,18 @@ app.frame('/board', neynarMiddleware, async (c) => {
                       key={index}
                       gap="8"
                       alignHorizontal="center"
-                      paddingBottom="8"
+                      paddingBottom="4"
                     >
                       <HStack gap="6" paddingBottom="8" alignHorizontal="left">
-                        <Text size="20" color="purple">
+                        <Text size="16" color="purple">
                           #{index + 1}
                         </Text>
-                        <Image src={item.pfp_url} height="24" width="24" />
-                        <Text size="16">{item.display_name}</Text>
-                        <Text color="text100" size="16">
+                        <Image src={item.pfp_url} height="18" width="24" />
+                        <Text size="12">{item.display_name}</Text>
+                        <Text color="text100" size="12">
                           {item.point ?? 0}
                         </Text>
-                        <Text>Points</Text>
+                        <Text size="12">Points</Text>
                       </HStack>
                     </VStack>
                   ))}

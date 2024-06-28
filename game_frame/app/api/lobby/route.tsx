@@ -18,6 +18,7 @@ const app = new Frog({
 });
 
 async function fetchNFTData(owner: string) {
+  console.log("hello");
   // las vegas, macau, monte carlo
   const contract_addresses = [
     '0x693F24A8D3a3DEC819C55875ccafB462bc4Fe00c',
@@ -35,7 +36,9 @@ async function fetchNFTData(owner: string) {
       const response = await fetch(url, options);
       const tmpNFTs = await response.json();
 
-      if (tmpNFTs['ownedNfts'] !== undefined) {
+      console.log(tmpNFTs);
+
+      if (tmpNFTs["totalCount"] !== 0) {
         status = index;
         break; // Breaking the loop as soon as we find the owned NFTs
       }
@@ -53,6 +56,7 @@ interface StageJson {
 }
 
 app.frame('/lobby', neynarMiddleware, async (c) => {
+  console.log('yes');
   const fid = c['var']['interactor']?.fid;
   const { buttonValue } = c;
   const verifiedAddress = c['var']['interactor']?.['verifiedAddresses']?.[
@@ -94,7 +98,7 @@ app.frame('/lobby', neynarMiddleware, async (c) => {
 
   // insert user data if the user has not been registered yet
   if (rows[0] == undefined) {
-    await sql`INSERT INTO public."user_data" (fid, wallet_address, point, city) VALUES(${fid?.toString()}, ${verifiedAddress}, ${status}, 0);`;
+    await sql`INSERT INTO public."user_data" (fid, wallet_address, point, city) VALUES(${fid?.toString()}, ${verifiedAddress}, 0, ${status});`;
   }
 
   var image_url = '';
@@ -168,7 +172,7 @@ app.frame('/lobby', neynarMiddleware, async (c) => {
     // when the user does not hold the NFT, display error image
     return c.res({
       action: '/',
-      image: `${BASE_URL}/attempt_limitation.png`,
+      image: `${BASE_URL}/NFT_hold_error.png`,
       intents: [<Button value="check">Back</Button>],
     });
   }
