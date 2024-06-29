@@ -1,6 +1,6 @@
 # Casino Wars Project
 
-Our project is a city-based and personal-based leaderboard point earning SocialFi game framework. To play these games, you must own a city NFT, which can be minted through the city NFT frame. Once you have a city NFT, you are eligible to play three games: Roulette, Rock Paper Scissors (RPS), and Coin Flip, each once per day.
+Our project is a city-based and personal-based leaderboard point earning SocialFi game framework in Warpcast Frame. To play these games, you must own a city NFT, which can be minted through the city NFT frame. Once you have a city NFT, you are eligible to play three games: Roulette, Rock Paper Scissors (RPS), and Coin Flip, each once per day.
 
 
 
@@ -20,7 +20,7 @@ Technlogies to develop
 - Alchemy API
 - TypeScript
 - Vercel
-- Postgres
+- PostgreSQL
 - Solidity
 - Pinata
 
@@ -29,6 +29,10 @@ If you want to run our frame, enroll and create accounts of neynar api, alchemy 
 - https://neynar.com/
 - https://www.alchemy.com/
 - https://vercel.com/
+
+You can check how the frame works in frame validator below:
+
+- https://warpcast.com/~/developers/frames
 
 We created a "user_data" table in PostgresSQL below:
 | id | fid | wallet_address | point | city | game1_tried_at | game2_tried_at | game3_tried_at |

@@ -50,3 +50,9 @@ npm run dev
 ```
 
 4. go to the "BASE_URL/api"
+You can check how our frame works in https://warpcast.com/~/developers/frames
+Enter the "https://city-leaderboard.vercel.app/api" 
+
+If you want to try it in local:
+BASE_URL can be "http://localhost:3000"
+go to the "BASE_URL/api/dev"

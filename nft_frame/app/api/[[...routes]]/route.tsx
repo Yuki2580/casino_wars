@@ -40,8 +40,6 @@ async function fetchNFTData(owner: string) {
       const tmpNFTs = await response.json();
 
       if (tmpNFTs['totalCount'] !== 0) {
-        console.log('index');
-        console.log(index);
         status = index;
         break;
       }
